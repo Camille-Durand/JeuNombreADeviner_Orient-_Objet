@@ -46,11 +46,7 @@ class CPartie {
         // Entrée : la partie pour laquelle est tiré le nombre mystère
 
         int TirerNombreMystere();
-
-
-
         int nbEssaisMax; // nombre d'essais max
-
         int nbMin; // nombre minimal à trouver
         int nbMax; // nombre maximal à trouver
 

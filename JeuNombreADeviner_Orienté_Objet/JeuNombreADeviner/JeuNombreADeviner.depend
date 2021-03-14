@@ -84,3 +84,24 @@
 	<iostream>
 	"../include/Partie.h"
 
+1615745572 source:c:\users\admin\desktop\jeunombreadeviner_classev1-\jeunombreadeviner_orient-_objet\jeunombreadeviner_orienté_objet\src\joueur.cpp
+	<iostream>
+	"../include/Joueur.h"
+
+1615745572 c:\users\admin\desktop\jeunombreadeviner_classev1-\jeunombreadeviner_orient-_objet\jeunombreadeviner_orienté_objet\include\joueur.h
+	<string>
+
+1615745572 source:c:\users\admin\desktop\jeunombreadeviner_classev1-\jeunombreadeviner_orient-_objet\jeunombreadeviner_orienté_objet\src\partie.cpp
+	<cstdlib>
+	<ctime>
+	<iostream>
+	"../include/Partie.h"
+
+1615745830 c:\users\admin\desktop\jeunombreadeviner_classev1-\jeunombreadeviner_orient-_objet\jeunombreadeviner_orienté_objet\include\partie.h
+	<string>
+	"../include/Joueur.h"
+
+1615746428 source:c:\users\admin\desktop\jeunombreadeviner_classev1-\jeunombreadeviner_orient-_objet\jeunombreadeviner_orienté_objet\src\mainjeunombreadeviner.cpp
+	<iostream>
+	"../include/Partie.h"
+
