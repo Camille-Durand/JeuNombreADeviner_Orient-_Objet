@@ -18,7 +18,6 @@ using namespace std;
     // Paramètre d'entrée :
     //                  un_nom : le nom du joueur
     // Sortie : le joueur créé
-
     CJoueur::CJoueur(string un_nom)
     {
         this->nom = un_nom;
@@ -30,6 +29,13 @@ using namespace std;
 
 
 
+    //Destructeur
+    CJoueur::~CJoueur()
+    {
+        cout <<"Le joueur " << this->nom << " d'adresse " << this << " sera detruit.(bye-bye!)" << endl;
+    }
+
+
 
     // Nom : MajResultats
     // Rôle : met à jour les informations d'un joueur
@@ -38,8 +44,6 @@ using namespace std;
     //              - gagne qui vaut true si le joueur a gagné, false sinon
     // Entrée/sortie :
     //              le joueur dont on met à jour les résultats
-
-
     void CJoueur::MajResultats(int nbEssais, bool gagne)
     {
        this->nbTentatives= this->nbTentatives + nbEssais;
@@ -49,6 +53,8 @@ using namespace std;
 
        this->nbPartiesJouees++;
     }
+
+
 
     // Nom : Resultats
     // Rôle : indique les résultats d'un joueur
@@ -60,7 +66,6 @@ using namespace std;
     //                      - le nombre total d'essais
     // Entrée :
     //            -le joueur dont on veut les résultats
-
     void CJoueur::Resultats(int& nbsucces, int& nbechec, int& nbessais)
     {
         nbsucces = this->nbPartiesGagnees;
@@ -69,15 +74,28 @@ using namespace std;
         nbessais = this->nbTentatives;
     }
 
+
+
+    // Nom: Moyenne
+    // Rôle: calcule la moyenne
+    float CJoueur::MoyenneEssais()
+    {
+        float moyenne = 0;
+        moyenne = (float) this->nbTentatives / this->nbPartiesJouees;
+
+        cout << "Moyenne: " << moyenne << endl;
+        return moyenne;
+    }
+
+
+
     // Nom :Nom
     // Rôle : retourne le nom du joueur
     // Paramètres d'entrée: le joueur dont on veut le nom
     // Valeur de retour : nom du joueur
     // Entrée : le joueur dont on veut le nom
-
     string CJoueur::Nom()
     {
 
         return this->nom;
     }
-

@@ -17,29 +17,31 @@ using namespace std;
 
 int main()
 {
+    cout << "*     *    *   *  * *Bienvenue dans JeuNombreADeviner!* *  *   *    *     *\n \n                 - Votre but: deviner le nombre mystere! -" << endl;
+
+    cout << "--------------------------------------------------------------------------------------------\n"<< endl;
 
     //Création d'un joueur
-    cout << "Vous allez jouer pour deviner un nombre secret" << endl;
     cout << "----------------------------------------------"<< endl;
-    cout << "Veuillez entrer le nom du Joueur1" << endl;
+    cout << "Nom du Joueur 1: " << endl;
     string un_nom;
     cin >> un_nom;
     CJoueur joueur (un_nom);
 
     // Création d'un 2ème joueur
     cout << "----------------------------------------------"<< endl;
-    cout << "Veuillez entrer le nom du Joueur2" << endl;
+    cout << "Nom du Joueur 2: " << endl;
     string un_nom2;
     cin >> un_nom2;
     CJoueur joueur2 (un_nom2);
 
-
+    //Nombre de parties
     cout << "----------------------------------------------"<< endl;
     cout << "Combien de parties voulez-vous jouer ?" << endl;
     int nbParties;
     cin >> nbParties;
 
-
+    cout << "----------------------------------------------\n"<< endl;
 
     for (int i = 0; i <nbParties; i++)
     {
@@ -53,13 +55,16 @@ int main()
         partie.Jouer(joueur2); // exécution d'une partie pour le joueur2
     }
 
+    cout << "----------------------------------------------\n"<< endl;
 
     cout << "----------------------------------------------"<< endl;
     cout << "Affichage des resultats du joueur "<< joueur.Nom() << endl;
     cout << "----------------------------------------------"<< endl;
+
     // Récupération des résultats du joueur1
     int nbsucces, nbechecs, nbessais;
     joueur.Resultats(nbsucces, nbechecs, nbessais);  // les paramètres sont passés par référence
+
     // Affichage des résultats
     cout << "Nombre de parties gagnees : " << nbsucces << endl;
     cout << "Nombre de parties perdues : " << nbechecs << endl;
@@ -70,9 +75,10 @@ int main()
     cout << "Affichage des resultats du joueur "<< joueur2.Nom() << endl;
     cout << "----------------------------------------------"<< endl;
 
-
-    int nbsucces2, nbechecs2, nbessais2; // Récupération des résultats du joueur2
+    // Récupération des résultats du joueur2
+    int nbsucces2, nbechecs2, nbessais2;
     joueur2.Resultats(nbsucces2, nbechecs2, nbessais2);  // les paramètres sont passés par référence
+
     // Affichage des résultats
     cout << "Nombre de parties gagnees : " << nbsucces2 << endl;
     cout << "Nombre de parties perdues : " << nbechecs2 << endl;
@@ -85,8 +91,9 @@ int main()
     else if (nbsucces2<nbsucces)
         cout << joueur.Nom() << "a gagné!" << endl;
     else
-        cout << joueur.Nom() << " et " << joueur2.Nom() << "sont ex-aequo!" << endl;
+        cout << joueur.Nom() << " et " << joueur2.Nom() << " sont ex-aequo!" << endl;
 
+        float MoyenneEssais();
     cout << "----------------------------------------------"<< endl;
 
     return 0;

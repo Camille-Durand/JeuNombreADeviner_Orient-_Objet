@@ -23,7 +23,6 @@ class CPartie {
     //              le nombre minimal,
     //              le nombre maximal
     // Sortie : la partie qui est créée
-
      CPartie ( int nbmin = 0, int nbmax = 10, int nbessaismax = 4);
 
 
@@ -33,7 +32,6 @@ class CPartie {
     //        A la fin, met à jour les informations du joueur
     // Parametre d'entrée/sortie : le joueur
     // Entrée : la partie qui va se jouer
-
     void Jouer (CJoueur &joueur);
 
 
@@ -44,7 +42,6 @@ class CPartie {
         // Rôle : Tire aléatoirement un nombre à deviner entre nbMin et nbMax
         // Valeur de retour : nombre à deviner
         // Entrée : la partie pour laquelle est tiré le nombre mystère
-
         int TirerNombreMystere();
         int nbEssaisMax; // nombre d'essais max
         int nbMin; // nombre minimal à trouver

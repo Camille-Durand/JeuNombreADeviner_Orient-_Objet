@@ -26,7 +26,6 @@ using namespace std;
     //              le nombre minimal,
     //              le nombre maximal
     // Sortie : la partie qui est créée
-
      CPartie::CPartie ( int nbmin, int nbmax, int nbessaismax)
     {
         this->nbEssaisMax = nbessaismax;
@@ -42,8 +41,6 @@ using namespace std;
     //        A la fin, met à jour les informations du joueur
     // Parametre d'entrée/sortie : le joueur
     // Entrée : la partie qui va se jouer
-
-
     void CPartie::Jouer (CJoueur &un_joueur)
     {
          int nombre_propose; // nombre saisi par l'utilisateur
@@ -56,7 +53,7 @@ using namespace std;
         bool gagne = false;
 
         cout << "-------------"<< endl;
-        cout << un_joueur.Nom() << " joue" <<endl;
+        cout << un_joueur.Nom() << " joue..." <<endl;
         cout << "-------------"<< endl;
 
         while (i < 4 && gagne == false)
@@ -90,21 +87,18 @@ using namespace std;
         if (gagne)
             cout << "Bravo, vous avez gagne !"<<endl;
         else
-            cout << "Le nombre d'essais est epuise. La partie est perdue."<< endl;
+            cout << "Trop de tentatives !"<< endl;
 }
+
 
 
     // Nom :TirerNombreMystere
     // Rôle : Tire aléatoirement un nombre à deviner entre 0 et 10
     // Valeur de retour : nombre à deviner
     // Entrée : la partie pour laquelle est tirée le nombre mystère
-
     int CPartie::TirerNombreMystere()
     {
         srand((int)time(0));
         int nombreADeviner = rand() % (this->nbMax - this->nbMin +1) + this->nbMin;
         return nombreADeviner;
     }
-
-
-

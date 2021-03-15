@@ -22,8 +22,14 @@ class CJoueur {
     //        Le nombre de tentatives, de parties gagnées et de parties jouées seront à 0.
     // Paramètre d'entrée : un_nom le nom du joueur
     // Sortie : le joueur créé
-
     CJoueur(string un_nom);
+
+
+
+    //Destructeur
+    ~CJoueur();
+
+
 
     // Nom : MajResultats
     // Rôle : met à jour les informations d'un joueur
@@ -32,8 +38,9 @@ class CJoueur {
     //                  - gagne qui vaut true si le joueur a gagné, false sinon
     // Entrée/sortie :
     //                  le joueur dont on met à jour les résultats
-
     void MajResultats(int nbEssais, bool gagne);
+
+
 
     // Nom : Resultats
     // Rôle : indique les résultats d'un joueur
@@ -45,8 +52,14 @@ class CJoueur {
     //                      - le nombre total d'essais
     // Entrée :
     //            -le joueur dont on veut les résultats
-
     void Resultats(int &nbsucces, int &nbechec, int & nbessais);
+
+
+
+    // Nom: Moyenne
+    // Rôle: calcule la moyenne
+    float MoyenneEssais();
+
 
 
     // Nom :Nom
@@ -54,7 +67,6 @@ class CJoueur {
     // Entrée: le joueur dont on veut le nom
     // Valeur de retour : nom du joueur
     // Entrée : le joueur dont on veut le nom
-
     string Nom();
 
 
